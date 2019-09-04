@@ -1,0 +1,19 @@
+[
+    {
+        "name": "Events",
+        "href": "#",
+        "sub": [
+            {
+                "name": "White Collar",
+                "href": "/event/whitecollar"
+            },
+            {
+                "name": "BPlan",
+                "href": "/event/bplan"
+            },
+            {
+                "name": "Technokraft",
+                "href": "/event/technokraft"
+            }        ]
+    }
+]

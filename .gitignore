@@ -1,0 +1,9 @@
+node_modules
+package-lock.json
+build
+.DS_Store
+yarn.lock
+.idea
+.env
+public/cookies-eu-banner.min.js
+src/components/svg
