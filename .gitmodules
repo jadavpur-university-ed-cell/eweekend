@@ -1,0 +1,4 @@
+[submodule "src/lib/whitepaper"]
+	path = src/lib/whitepaper
+	url = git@github.com:oceanprotocol/whitepaper.git
+    branch = master

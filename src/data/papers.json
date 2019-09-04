@@ -1,0 +1,39 @@
+{
+    "title": "Deep Dive Into Our Papers",
+    "papers": [
+        {
+            "title": "Technical Whitepaper",
+            "description": "This paper presents Ocean Protocol. Ocean is a decentralized protocol and network of artificial intelligence (AI) data/services.\n\nOcean does decentralized orchestration: at its core are decentralized service agreements and decentralized access control, which execute on decentralized virtual machines. This allows connection to, monetization of, and curation of arbitrary data services. On that, Ocean adds network rewards to incentivize data sharing, including privacy-preserving data commons.",
+            "download": {
+                "file": "/tech-whitepaper.pdf",
+                "filename": "Ocean Protocol Technical Whitepaper.pdf"
+            },
+            "key": "tech-whitepaper",
+            "version": "2.0",
+            "updated": "Feb 2019"
+        },
+        {
+            "title": "Business Strategy",
+            "description": "This document presents a summary of the business model and ecosystem of Ocean Protocol.\n\nIt is complementary to the technical whitepaper for Ocean Protocol.",
+            "download": {
+                "file": "/business-strategy.pdf",
+                "filename": "Ocean Protocol Business Strategy.pdf"
+            },
+            "key": "business-strategy",
+            "version": "0.5",
+            "updated": "Feb 2019"
+        },
+        {
+            "title": "Marketplace Framework",
+            "description": "This document presents a summary of the core marketplace attributes and components required to facilitate the successful deployment of the decentralized data exchange protocol and network called Ocean Protocol.\n\nIt is complementary to the technical whitepaper for Ocean Protocol.",
+            "download": {
+                "file": "/marketplace-framework.pdf",
+                "filename": "Ocean Protocol Reference Marketplace Framework.pdf"
+            },
+            "key": "marketplace-framework",
+            "version": "2.0",
+            "updated": "Feb 2019"
+        }
+    ],
+    "comment": "Have a comment or suggestions about any of our documents?<br />Let us know <a href='https://twitter.com/oceanprotocol'>@oceanprotocol</a>."
+}
