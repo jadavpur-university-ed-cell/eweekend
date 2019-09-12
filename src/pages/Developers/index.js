@@ -24,7 +24,7 @@ export default class Developers extends Component {
                 headerBackgroundColor={colors.darkPurple}
                 headerBackgroundImage={OceanSquidBack}
                 headerViewport
-                headerAddition={<ProjectIntro buttonText="Register"  theme="white" form="test"/>}
+                headerAddition={<ProjectIntro buttonText="Register"  theme="white" form="technokraft"/>}
             >
                 <MorePages />
             </Page>

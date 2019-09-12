@@ -6,7 +6,7 @@ import { ReactComponent as ButtonMedium } from '../assets/buttons/medium.svg'
 import { ReactComponent as ButtonGithub } from '../assets/buttons/github.svg'
 import { ReactComponent as ButtonLinkedin } from '../assets/buttons/linkedin.svg'
 import { ReactComponent as ButtonYouTube } from '../assets/buttons/youtube.svg'
-import { ReactComponent as ButtonFB } from '../assets/buttons/fb2.svg'
+import { ReactComponent as ButtonFB } from '../assets/buttons/fb.svg'
 
 export default class SocialIcon extends PureComponent {
     static propTypes = {
