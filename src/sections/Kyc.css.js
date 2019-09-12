@@ -6,6 +6,7 @@ export const StyledButton = styled(Button)`
     margin: auto;
     min-width: 20rem;
     text-align: center;
+    cursor: default;
     padding: calc(${layout.spacer} / 1.5) ${layout.spacer};
     font-size: ${fonts.size.base};
 `
