@@ -69,7 +69,7 @@ export default class MorePages extends PureComponent {
                                     {item.title}
                                 </StyledTitle>
                                 <LearnMore>
-                                    Learn more <Arrow />
+                                    See more <Arrow />
                                 </LearnMore>
                             </NavLink>
                         </StyledPage>

@@ -1,12 +1,11 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import jsonp from 'jsonp'
+import serialize from 'form-serialize'
 import FormInput from './FormInput'
 import FormInputRadioCheckbox from './FormInputRadioCheckbox'
 import Button from '../Button'
 import forms from '../../data/forms'
 import gdpr from '../../data/gdpr'
-import MailchimpCheck from './MailchimpCheck'
 import { StyledMessage, Gdpr } from './FormModal.css'
 
 export default class ModalForm extends PureComponent {
@@ -21,8 +20,15 @@ export default class ModalForm extends PureComponent {
     }
 
     makeRequest = (url, modal) => {
-        jsonp(url, { param: 'c' }, (err, data) => {
-            if (err) {
+        fetch(url+"&sheetID="+modal).then((err, data) => {
+            if(err.status==200 || err.status==302){
+                this.setState({
+                    fetching: false,
+                    sent: true,
+                    message: forms[modal].success
+                })
+            }
+            else if (err) {
                 this.setState({
                     fetching: false,
                     message: err
@@ -47,120 +53,14 @@ export default class ModalForm extends PureComponent {
 
         const form = e.target
         const { modal } = this.props
-        const { baseUrl } = forms[modal]
-
-        let name
-        let email
-        let about
-        let message
-        let company
-
-        let location
-        let background
-        let interest
-        let publicspeaking
-        let community
-        let linkedin
-        let github
-        let twitter
-
-        let url
-
-        if (form.name) {
-            name = form.name.value && encodeURIComponent(form.name.value)
-        }
-
-        if (form.email) {
-            email = form.email.value && encodeURIComponent(form.email.value)
-        }
-
-        if (form.company) {
-            company =
-                form.company.value && encodeURIComponent(form.company.value)
-        }
-
-        if (form.message) {
-            message =
-                form.message.value && encodeURIComponent(form.message.value)
-        }
-
-        if (form.about) {
-            about = []
-
-            form.about.forEach(checkbox => {
-                if (checkbox.checked) {
-                    about.push(checkbox.value)
-                }
-            })
-
-            about = about.join(', ')
-        }
-
-        if (form.location) {
-            location =
-                form.location.value && encodeURIComponent(form.location.value)
-        }
-
-        if (form.background) {
-            background =
-                form.background.value &&
-                encodeURIComponent(form.background.value)
-        }
-
-        if (form.interest) {
-            interest =
-                form.interest.value && encodeURIComponent(form.interest.value)
-        }
-
-        if (form.publicspeaking) {
-            publicspeaking =
-                form.publicspeaking.value &&
-                encodeURIComponent(form.publicspeaking.value)
-        }
-
-        if (form.community) {
-            community =
-                form.community.value && encodeURIComponent(form.community.value)
-        }
-
-        if (form.linkedin) {
-            linkedin =
-                form.linkedin.value && encodeURIComponent(form.linkedin.value)
-        }
-
-        if (form.github) {
-            github = form.github.value && encodeURIComponent(form.github.value)
-        }
-
-        if (form.twitter) {
-            twitter =
-                form.twitter.value && encodeURIComponent(form.twitter.value)
-        }
-
-        if (modal === 'ambassadors') {
-            url = `${baseUrl}&NAME=${name}&EMAIL=${email}&LOCATION=${location}&BACKGROUND=${background}&INTEREST=${interest}&SPEAKING=${publicspeaking}&COMMUNITY=${community}&LINKEDIN=${linkedin}&GITHUB=${github}&TWITTER=${twitter}&${
-                gdpr.flag
-            }`
-        } else {
-            let listId
-
-            if (about === 'provider' || about === 'provider, consumer') {
-                listId = forms[modal].listIdProvider
-            } else {
-                listId = forms[modal].listIdConsumer
-            }
-
-            url = `${baseUrl}&id=${listId}&NAME=${name}&EMAIL=${email}&COMPANY=${company}&MESSAGE=${message}&${
-                gdpr.flag
-            }`
-        }
-
+        const baseUrl = process.env.REACT_APP_FORM_BASEURL
+        const data = "?" + serialize(form)
         this.setState(
             {
                 fetching: true,
                 message: ''
             },
-            () => this.makeRequest(url, modal)
+            () => this.makeRequest(baseUrl+data, modal)
         )
     }
 
@@ -177,8 +77,6 @@ export default class ModalForm extends PureComponent {
             />
         ) : (
             <>
-                <MailchimpCheck modal={modal} />
-
                 <form onSubmit={this.onSubmit}>
                     {forms[modal].fields &&
                         Object.entries(forms[modal].fields).map(

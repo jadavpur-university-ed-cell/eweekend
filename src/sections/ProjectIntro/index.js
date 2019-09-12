@@ -23,23 +23,21 @@ export default class ProjectIntro extends PureComponent {
     }
 
     handleButtonClick = () => {
-        this.toggleModal('dataleads')
+        this.toggleModal(this.props.form)
     }
 
     render() {
         return (
             <>
-                <ContentRow>
+                {/* <ContentRow>
                     <DataGraphic />
                     <Features features={intro.features} />
-                </ContentRow>
+                </ContentRow> */}
 
                 <ContentRow narrow center>
                     <Contact>
-                        {intro.contact.text} <br />
-                        <Button white center onClick={this.handleButtonClick}>
-                            {intro.contact.button}
-                        </Button>
+                        {this.props.contentText} <br />
+                        {this.props.theme=="white"?(<Button white center onClick={this.handleButtonClick}>{this.props.buttonText}</Button>):(<Button center onClick={this.handleButtonClick}>{this.props.buttonText}</Button>)}
                     </Contact>
                 </ContentRow>
 

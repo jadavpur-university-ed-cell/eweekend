@@ -43,7 +43,7 @@ export default class MailchimpCheck extends PureComponent {
         if (this.state.mailchimpUnavailable) {
             return (
                 <MailchimpWarning>
-                    {`Please make sure to disable your content blocker or add an exception for oceanprotocol.com before submitting this form. We use Mailchimp to collect your data and in some cases this is blocked by content blockers in some browsers.`}
+                    {`Please make sure to disable your content blocker or add an exception for juecell.in before submitting this form. We use Mailchimp to collect your data and in some cases this is blocked by content blockers in some browsers.`}
                 </MailchimpWarning>
             )
         }

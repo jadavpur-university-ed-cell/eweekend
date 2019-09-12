@@ -17,7 +17,7 @@ export default class Home extends Component {
             <Page location={this.props.location} noheader>
                 <Welcome />
                 <MorePages />
-                <Kyc />
+                {/* <Kyc /> */}
                 {/* <Events /> */}
                 {/* <MediaMentions /> */}
             </Page>

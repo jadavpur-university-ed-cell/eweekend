@@ -10,7 +10,7 @@ export const StyledSpinner = styled.div`
         content: '';
         box-sizing: border-box;
         position: absolute;
-        top: 0;
+        top: 7px;
         left: 50%;
         width: 20px;
         height: 20px;
