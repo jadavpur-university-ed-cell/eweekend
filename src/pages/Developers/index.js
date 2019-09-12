@@ -7,6 +7,7 @@ import MorePages from '../../sections/MorePages'
 import content from '../../data/pages/developers.json'
 import OceanSquidBack from '@oceanprotocol/art/squid/squid-back.svg'
 import { colors } from '../../styles'
+import ProjectIntro from '../../sections/ProjectIntro/'
 import Header from './Header'
 
 export default class Developers extends Component {
@@ -22,11 +23,9 @@ export default class Developers extends Component {
                 location={this.props.location}
                 headerBackgroundColor={colors.darkPurple}
                 headerBackgroundImage={OceanSquidBack}
-                headerAddition={<Header />}
                 headerViewport
+                headerAddition={<ProjectIntro buttonText="Register"  theme="white" form="technokraft"/>}
             >
-                <Docs />
-                <DataScience />
                 <MorePages />
             </Page>
         )

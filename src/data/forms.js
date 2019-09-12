@@ -50,6 +50,206 @@ const forms = {
         listIdProvider: 'b402d6b267',
         listIdConsumer: '482c337540'
     },
+    whiteCollar: {
+        title: 'White Collar Event Registration',
+        fields: {
+            name: {
+                label: 'Your Name',
+                placeholder: 'i.e. John Doe',
+                required: true
+            },
+            email: {
+                label: 'Your Email',
+                placeholder: 'i.e. johndoe@gmail.com',
+                type: 'email',
+                required: true
+            },
+            contact: {
+                label: 'Your Contact number',
+                placeholder: 'i.e. 9876543210',
+                type: 'number',
+                required: true
+            },
+            department: {
+                label: 'Your Department',
+                placeholder: 'i.e. FTBE',
+                required: true
+            },
+            college: {
+                label: 'Your College/University',
+                placeholder: 'i.e. Jadavpur University',
+                required: true
+            },
+            year: {
+                label: 'Your Year',
+                type: 'checkbox',
+                required: true,
+                options: [
+                    {
+                        value: '1',
+                        label: 'Freshers ( First Year )'
+                    }
+                ]
+            }
+        },
+        button: 'Submit',
+        success: `Thank you! Stay connected with us on Social media for latest updates.`,
+        baseUrl:
+            'https://script.google.com/macros/s/AKfycbzipMZgJwkXnW9FNDFjC2wLJKAt2c0kKLU4kzEqJFsK538EWSI/exec',
+        listIdProvider: 'b402d6b267',
+        listIdConsumer: '482c337540',
+        sheetName: 'whitecollar' 
+    },
+    test: {
+        title: 'dummy Event Registration',
+        fields: {
+            name: {
+                label: 'Your Name',
+                placeholder: 'i.e. John Doe',
+                default: 'test',
+                required: true
+            }
+        },
+        button: 'Submit',
+        success: `Thank you! Stay connected with us on Social media for latest updates.`,
+        sheetName: 'test' 
+    }, 
+    technokraft: {
+        title: 'Technokraft Event Registration',
+        fields: {
+            name: {
+                label: 'Your Name',
+                placeholder: 'i.e. John Doe',
+                required: true
+            },
+            email: {
+                label: 'Your Email',
+                placeholder: 'i.e. johndoe@gmail.com',
+                type: 'email',
+                required: true
+            },
+            contact: {
+                label: 'Your Contact number',
+                placeholder: 'i.e. 9876543210',
+                type: 'number',
+                required: true
+            },
+            department: {
+                label: 'Your Department',
+                placeholder: 'i.e. FTBE',
+                required: true
+            },
+            year: {
+                label: 'Your Year',
+                type: 'number',
+                required: true
+            },
+            hobbies: {
+                label: 'What are your Hobbies?',
+                maxWords: 50
+            },
+            interest: {
+                label: 'Why are you interested in the event?',
+                maxWords: 100,
+                tag: 'textarea'
+            }
+        },
+        button: 'Submit',
+        success: `Thank you! Stay connected with us on Social media for latest updates.`,
+        sheetName: 'technokraft' 
+    },    
+    bPlan: {
+        title: 'Weekend Pitch Event Registration',
+        fields: {
+            college: {
+                label: 'College/University',
+                placeholder: 'i.e. Jadavpur University',
+                required: true
+            },
+            teamName: {
+                label: 'Team name',
+                placeholder: 'i.e. Fire Spirits',
+                required: true
+            },
+            leaderName: {
+                label: 'Team Captain name',
+                placeholder: 'i.e. John Doe',
+                required: true
+            },
+            email: {
+                label: 'Team Captain email',
+                placeholder: 'i.e. johndoe@gmail.com',
+                type: 'email',
+                required: true
+            },
+            contact: {
+                label: 'Captain Contact number',
+                placeholder: 'i.e. 9876543210',
+                type: 'number',
+                required: true
+            },
+            waContact: {
+                label: 'Captain Whatsapp number',
+                placeholder: 'i.e. 9876543210',
+                type: 'number',
+                required: true
+            },
+            teamMates: {
+                label: 'Teammates',
+                placeholder:
+                    'Enter full names in new lines, Maximum team of 4.',
+                maxWords: 10,
+                tag: 'textarea',
+                required: true
+            },
+            ideaStage: {
+                label: 'How far your idea is currently?',
+                type: 'radio',
+                required: true,
+                options: [
+                    {
+                        value: 'ideation',
+                        label: 'Just an idea'
+                    },
+                    {
+                        value: 'planning',
+                        label: 'Idea and plan'
+                    },
+                    {
+                        value: 'prototype',
+                        label: 'Idea, plan and prototype'
+                    },
+                    {
+                        value: 'sales',
+                        label: 'Ready for sales'
+                    },
+                    {
+                        value: 'revenue',
+                        label: 'Already made 1st rupee in revenue'
+                    }
+                ]
+            },
+            ip: {
+                label: 'Do you own a IP of your idea?',
+                type: 'radio',
+                required: true,
+                options: [
+                    {
+                        value: 'yes',
+                        label: 'Yes'
+                    },
+                    {
+                        value: 'no',
+                        label: 'No'
+                    }
+                ]
+            },
+
+        },
+        button: 'Submit',
+        success: `Thank you! Stay connected with us on Social media for latest updates.`,
+        sheetName: 'bplan' 
+    },    
     ambassadors: {
         title: 'Ocean Protocol Ambassador Program',
         description:

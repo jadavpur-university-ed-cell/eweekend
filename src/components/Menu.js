@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { ReactComponent as OceanLogoWhite } from '../assets/logos/logo-white.svg'
-import { ReactComponent as OceanLogoBlack } from '../assets/logos/logo-white.svg' //Change this
+import { ReactComponent as OceanLogoBlack } from '../assets/logos/logo-black.svg' //Change this
 import { ReactComponent as Caret } from '../assets/misc/caret.svg'
 import {
     StyledMenu,
