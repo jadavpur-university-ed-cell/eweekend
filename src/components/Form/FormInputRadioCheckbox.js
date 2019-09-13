@@ -27,6 +27,7 @@ const FormRadio = ({ name, required, label, help, type, options }) => (
                         id={option.value}
                         name={name}
                         value={option.value}
+                        required={required ? true : false}
                     />
                     <RadioLabel htmlFor={option.value}>
                         {option.label}

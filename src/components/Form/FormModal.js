@@ -31,12 +31,12 @@ export default class ModalForm extends PureComponent {
             else if (err) {
                 this.setState({
                     fetching: false,
-                    message: err
+                    message: "Failed, Please Try again later."
                 })
             } else if (data.result !== 'success') {
                 this.setState({
                     fetching: false,
-                    message: data.msg
+                    message: "Failed, Please Try again later."
                 })
             } else {
                 this.setState({
