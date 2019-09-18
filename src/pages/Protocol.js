@@ -24,7 +24,7 @@ export default class Project extends Component {
                 location={this.props.location}
                 headerViewport
                 headerFullWidth
-                headerAddition={<ProjectIntro buttonText="Register" contentText="Want to test your Managerial Skills?" theme="white" form="whiteCollar"/>}
+                headerAddition={<ProjectIntro buttonText="Registration Closed" contentText="Want to test your Managerial Skills?" theme="white"/>}
                 headerStyle={{ backgroundSize: 'contain' }}
             >
                 <MorePages />

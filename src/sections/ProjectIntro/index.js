@@ -41,7 +41,7 @@ export default class ProjectIntro extends PureComponent {
                     </Contact>
                 </ContentRow>
 
-                {this.state.showModal && (
+                {this.state.showModal && this.state.modal && (
                     <Modal
                         title={forms[this.state.modal].title}
                         description={forms[this.state.modal].description}

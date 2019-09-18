@@ -30,7 +30,6 @@ export default class Community extends Component {
                 headerLeft
                 headerAddition={<ProjectIntro buttonText="Register" form="bPlan" theme="dark"/>}
             >
-
                 <MorePages />
             </Page>
         )
