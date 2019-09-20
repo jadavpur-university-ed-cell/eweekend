@@ -19,7 +19,7 @@ const Kyc = () => (
         />
 
         <ContentRow>
-            <StyledButton primary href={content.button.link}>
+            <StyledButton href={content.button.link}>
                 {content.button.title}
             </StyledButton>
         </ContentRow>

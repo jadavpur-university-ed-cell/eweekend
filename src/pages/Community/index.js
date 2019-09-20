@@ -28,7 +28,7 @@ export default class Community extends Component {
                 headerViewport
                 headerFullWidth
                 headerLeft
-                headerAddition={<ProjectIntro buttonText="Register" form="bPlan" theme="dark"/>}
+                headerAddition={<ProjectIntro buttonText="Registration Closed" theme="dark"/>}
             >
                 <MorePages />
             </Page>
